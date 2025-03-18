@@ -105,11 +105,11 @@ main::before {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  filter: blur(7px); /* Sesuaikan nilai blur sesuai keinginan Anda */
+  filter: blur(3px); /* Sesuaikan nilai blur sesuai keinginan Anda */
   z-index: -1; /* Letakkan di belakang konten main */
 
   animation: showHeight80px 1.5s ease-in-out forwards;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 
 .hello-text {
