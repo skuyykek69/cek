@@ -81,7 +81,7 @@ header {
 /* MAIN */
 main {
   /* background: green; */
-  background: white;
+  /* background: white; */
   width: 100%;
   min-height: 90dvh;
   max-width: 800px;
@@ -90,6 +90,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* Tambahkan background image */
+  background-image: url('images/bg.jpg');
+  background-size: cover; /* Membuat gambar menutupi seluruh area main */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+  background-position: center center; /* Memposisikan gambar di tengah */
 }
 main::before {
   content: "";
