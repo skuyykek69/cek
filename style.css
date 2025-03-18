@@ -80,8 +80,8 @@ header {
 
 /* MAIN */
 main {
-  /* background: green; */
-  /* background: white; */
+  position: relative; /* Penting untuk positioning pseudo-elemen */
+  /* Hapus properti background-image, background-size, dll. dari sini */
   width: 100%;
   min-height: 90dvh;
   max-width: 800px;
@@ -90,22 +90,23 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Tambahkan background image */
-  background-image: url('images/bg.jpg');
-  background-size: cover; /* Membuat gambar menutupi seluruh area main */
-  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
-  background-position: center center; /* Memposisikan gambar di tengah */
+  /* Tambahkan background warna solid sedikit transparan sebagai fallback */
+  background-color: rgba(255, 255, 255, 0.1); /* Contoh */
 }
+
 main::before {
   content: "";
   position: absolute;
-  width: 4px;
-  height: 0px;
-  background: #00cbd4;
-  margin-left: -30px;
-
-  animation: showHeight80px 1.5s ease-in-out forwards;
-  animation-delay: 2.5s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/bg.jpg'); /* Ganti dengan path foto Anda */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: blur(5px); /* Sesuaikan nilai blur sesuai keinginan Anda */
+  z-index: -1; /* Letakkan di belakang konten main */
 }
 
 .hello-text {
